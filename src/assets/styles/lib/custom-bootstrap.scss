@@ -1,0 +1,33 @@
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  // xxl: 1400px,
+  xxl: 1600px
+) !default;
+// scss-docs-end grid-breakpoints
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1500px
+) !default;
+// scss-docs-end container-max-widths
+
+$screen-xs: 0;
+$screen-sm: 540px;
+$screen-md: 720px;
+$screen-lg: 960px;
+$screen-xl: 1140px;
+$screen-xxl: 1500px;
+
+$table-cell-padding-y: 0.8rem;
+$table-cell-padding-x: 1rem;
+
+@import "~bootstrap/scss/bootstrap";

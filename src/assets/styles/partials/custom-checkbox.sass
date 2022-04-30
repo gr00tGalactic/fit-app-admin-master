@@ -1,0 +1,67 @@
+.custom-checkbox
+  display: inline-block
+  position: relative
+  font-family: inherit
+  font-style: normal
+  font-weight: inherit
+  font-size: 1rem
+  line-height: 1rem
+  color: inherit
+  padding-left: 1.7em
+  margin-bottom: 0
+  cursor: pointer
+  user-select: none
+  input 
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+    &:checked ~ .custom-checkbox__checkmark
+      background-color: yellow
+  &__checkmark 
+    position: absolute
+    top: 0
+    left: 0
+    height: 1em
+    width: 1em
+    background-color: transparent
+    border: 1px solid rgba(0, 0, 0, 0.25)
+    border-radius: 0.25em 
+
+.custom-checkbox
+  &--1  
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #135193
+  &--2 
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #FF8811
+  &--3 
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #FF5A5F
+  &--4
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #63A088
+  &--5
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #53DD6C
+  &--6
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #D9DD92
+  &--7
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #6CCFF6
+  &--8
+    input     
+      &:checked ~ .custom-checkbox__checkmark
+        background-color: #DE639A
+    
+       
+    

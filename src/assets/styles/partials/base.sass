@@ -1,0 +1,402 @@
+html,body
+  font-family: 'Inter', sans-serif  
+  // font-size: 15px
+  line-height: 1.2
+  color: $b1
+
+dl,
+ol,
+ul
+  margin-bottom: 0
+  padding: 0
+ul
+  li
+    list-style-type: none
+
+a
+  text-decoration: none
+  display: inline-block
+  color: inherit
+  &:hover
+    text-decoration: none
+    color: inherit
+
+
+.app
+  &-container
+    width: 1340px
+    margin: 0 auto
+    padding: 0 30px
+  &-sticky-header
+    position: sticky
+    top: 0
+    background-color: $w1
+    padding-bottom: 16px
+    z-index: 10
+
+.text-orange
+  color: $orange-500
+
+.form
+  &-group    
+    padding-bottom: 24px
+
+.notice
+  position: fixed
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  width: 100%
+  max-width: 550px  
+  padding: 16px 20px
+  color: $w1
+  font-weight: 700
+  text-align: center
+  font-size: 14px
+  z-index: 200
+  &--success
+    background: $g1
+  &--error
+    background: $r1
+
+.login
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  max-width: 550px
+  margin: 0 auto
+  min-height: 100vh
+  padding: 100px 15px
+  &__logo
+    display: block
+    max-width: 100%
+    margin-top: 70px
+  &-form
+    padding-top: 100px
+    display: block
+    width: 100%
+    &__label
+      display: block
+      font-size: 26px
+      font-weight: 700
+      text-align: center
+      padding-bottom: 24px
+  &__version
+    text-transform: uppercase
+    padding-top: 100px
+    font-weight: 700
+
+.verification-code
+  position: relative
+  width: 200px
+  margin: 0 auto
+  border-bottom: 2px solid $b1
+  &__border
+    position: absolute
+    left: 95px
+    bottom: -2px
+    width: 15px
+    border-bottom: 2px solid $w1
+    z-index: 1
+  &::before,
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    left: 40px
+    bottom: -2px
+    width: 15px
+    border-bottom: 2px solid $w1
+    z-index: 1
+  &::after
+    left: auto
+    right: 40px
+  &__input
+    display: block
+    padding: 0.5rem 15px
+    font-size: 1.25rem
+    font-weight: 400
+    line-height: 1.5
+    background-color: #fff
+    background-clip: padding-box
+    border: none
+    letter-spacing: 41px
+    user-select: none
+    &:focus-visible
+      outline: none
+  &.is-invalid
+    border-bottom: 2px solid $r1
+
+.header
+  display: flex
+  padding: 40px 0 30px
+  &__left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    white-space: nowrap
+    overflow-x: auto
+  &__title
+    text-transform: uppercase
+    font-size: 34px
+    font-weight: 700
+    margin: 0
+  &__account
+    margin-left: auto
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+.profile
+  display: flex
+  align-items: center
+  margin-bottom: 16px
+  &__name
+    font-weight: 700
+    margin-right: 16px
+  &__avatar
+    border-radius: 50%
+    width: 46px
+    height: 46px
+    background: $b2 url('../img/female.png') no-repeat center center
+    background-size: contain
+
+.content
+  &-table
+    &__row
+      display: flex
+      &--head        
+        padding-bottom: 10px
+        margin-bottom: 10px
+        border-bottom: 2px solid $border-color
+        span
+          font-weight: 700
+    &__cell
+      flex-grow: 1
+      flex-basis: 0
+      padding: 10px    
+      text-align: center 
+      display: flex
+      justify-content: center
+      align-items: center
+      &--head
+        display: block         
+      &--action
+        flex-grow: 0
+        flex-basis: 150px
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+      &-input
+        max-width: 350px
+        margin: 0 auto
+
+.page
+  min-height: 100vh
+  display: flex
+  &-content
+    flex-grow: 1
+    flex-basis: 0
+    padding-bottom: 40px
+.sidebar
+  position: sticky
+  top: 0
+  width: 180px
+  min-width: 180px
+  height: 100vh
+  overflow-y: auto
+  background: $b0
+  color: $w1
+  font-weight: 700  
+  padding: 40px 24px 30px
+  display: flex
+  flex-direction: column
+  &__logo
+    display: block
+    width: 110px
+    height: 44px
+    line-height: 44px
+    margin: 0 auto
+    background: url(../img/logo-white.svg) no-repeat center center
+    background-size: contain
+    margin-bottom: 76px
+  &__version
+    margin-top: auto
+    text-transform: uppercase
+    font-weight: 400
+    text-align: center
+  &-list
+    margin-top: 60px
+    &:first-child
+      margin-top: 0
+    &__link
+      display: block
+      text-transform: uppercase
+      margin-bottom: 14px
+      transition: 0.4s
+      &:hover
+        color: $primary
+      &--active
+        color: $primary
+
+.filter
+  &-panel
+    display: flex
+    padding-bottom: 32px
+    white-space: nowrap
+  &-tabs
+    display: flex
+    align-items: center
+    overflow-x: auto
+  &-tab
+    margin-left: 30px
+    font-weight: 700
+    cursor: pointer
+    user-select: none    
+    &:first-child
+      margin-left: 0
+    input
+      position: absolute
+      opacity: 0
+      cursor: pointer
+      &:checked  ~ .checkmark
+        color: $primary
+  &-period
+    margin-left: auto
+    padding-left: 16px
+    display: flex
+    align-items: center
+    &__label
+      margin-left: 16px
+      margin-right: 10px
+
+.search
+  &-panel
+    display: flex
+    align-items: center
+    padding-bottom: 30px    
+    &__search
+      max-width: 30%
+    &__btns
+      margin-left: auto
+      padding-left: 16px
+
+.main-table
+  thead
+    tr
+      border-bottom: 2px solid $border-color
+    th
+      position: relative
+      padding-top: 1rem
+      padding-bottom: 1rem
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 1rem
+        right: 0
+        // height: 18px
+        height: calc(100% - 32px)
+        width: 1px
+        background: $b1
+      &:last-child
+        &::after
+          display: none
+  th,td
+    text-align: center
+    white-space: nowrap    
+  &__checkbox
+    margin: 0
+
+.table-fit
+  width: auto !important
+  thead, tbody
+    th, td
+      width: auto !important
+      &.full-width-cell
+        max-width: 100% !important
+        width: 100% !important
+
+.table-nowrap
+  thead, tbody
+    th, td
+      white-space: nowrap
+.white-space-normal-cell
+  white-space: normal!important
+  min-width: 150px  
+
+.modal-custom
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background: rgba(0,0,0,0.6)
+  z-index: 100
+  display: flex
+  justify-content: center
+  align-items: center
+  &__content
+    width: 90%
+    max-width: 800px
+    max-height: 90vh
+    overflow-y: auto
+    padding: 30px 24px
+    background: $w1
+    border-radius: 6px
+
+/* width */
+::-webkit-scrollbar
+  width: 8px
+  height: 5px
+
+/* Track */
+::-webkit-scrollbar-track
+  box-shadow: inset 0 0 5px $gray-500
+  border-radius: 10px
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+  background: $gray-500
+  border-radius: 10px
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+  background: $gray-600
+
+.sphere-img
+  position: relative
+  &__bg
+    position: relative
+    width: 100%
+    padding-top: 100%
+    height: 0
+    background: $gray-400
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+  &__text
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 108px
+    text-align: center
+  &__input
+    opacity: 0
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    cursor: pointer
+
+.mx-datepicker
+  width: 150px!important
+
+.chart-container
+  padding-top: 24px
+
+      
+
